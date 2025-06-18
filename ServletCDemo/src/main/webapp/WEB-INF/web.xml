@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+	id="WebApp_ID" version="5.0">
+	<display-name>ServletCDemo</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.xhtml</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.xhtml</welcome-file>
+	</welcome-file-list>
+
+	<display-name>ServletCDemo</display-name>
+
+	<servlet>
+		<servlet-name>MyServletHTTP</servlet-name>
+		<servlet-class>in.dk.backend.MyServletHTTP</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyServletHTTP</servlet-name>
+		<url-pattern>/myhttp</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- for another login servlet -->
+	<servlet-mapping>
+		<servlet-name>mylog</servlet-name>
+		<url-pattern>/mylogin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>mylog</servlet-name>
+		<servlet-class>in.dk.backend.Login</servlet-class>
+	</servlet>
+
+	<!-- for register servlet -->
+	<servlet-mapping>
+		<servlet-name>MyRegister</servlet-name>
+		<url-pattern>/myreg</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyRegister</servlet-name>
+		<servlet-class>in.dk.backend.Register</servlet-class>
+	</servlet>
+
+</web-app>
